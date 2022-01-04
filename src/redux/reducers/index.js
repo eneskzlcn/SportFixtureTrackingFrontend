@@ -1,10 +1,10 @@
 import { combineReducers } from "redux";
-import { clubsReducer } from "./clubsReducer";
-import { sportsReducer } from "./sportsReducer";
-import { teamsReducer } from "./teamsReducer";
+import { clubReducer } from "./clubReducer";
+import { sportReducer } from "./sportReducer";
+import { teamReducer } from "./teamReducer";
 
 export const reducers = combineReducers({
-    allClubs:clubsReducer,
-    allTeams:teamsReducer,
-    allSports:sportsReducer,
+    allClubs:clubReducer,
+    allTeams:teamReducer,
+    allSports:sportReducer,
 });

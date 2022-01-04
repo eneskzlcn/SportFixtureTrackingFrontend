@@ -12,7 +12,7 @@ function App() {
   useEffect(()=>{
 
     dispatch(getSports());
-  },[]);
+  },[dispatch]);
 
   
   console.log("Sports: ",sports)
