@@ -2,4 +2,6 @@ export const ActionTypes = {
     GET_CLUBS : "GET_CLUBS",
     GET_TEAMS : "GET_TEAMS",
     GET_SPORTS : "GET_SPORTS",
+    GET_FIXTURES: "GET_FIXTURES",
+    GET_FIXTURE_RESULTS: "GET_FIXTURE_RESULTS",
 }

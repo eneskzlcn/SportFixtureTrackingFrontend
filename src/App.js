@@ -3,19 +3,19 @@ import './App.css';
 import { useSelector,useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 
-import { getSports } from './redux/actions/sportActions';
+import { getFixtures } from './redux/actions/fixtureActions';
 function App() {
 
-  const sports = useSelector((state) => state.allSports.sports)
+  const fixtures = useSelector((state) => state.allFixtures.fixtures)
   const dispatch = useDispatch();
 
   useEffect(()=>{
 
-    dispatch(getSports());
+    dispatch(getFixtures());
   },[dispatch]);
 
   
-  console.log("Sports: ",sports)
+  console.log("fixtures: ",fixtures)
   return (
     <div className="App">
       <header className="App-header">
