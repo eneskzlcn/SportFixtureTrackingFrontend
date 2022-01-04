@@ -2,21 +2,20 @@ import logo from './logo.svg';
 import './App.css';
 import { useSelector,useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import { getFixtureResults } from './redux/actions/fixtureResultActions';
+import { getClub } from './redux/actions/clubActions';
 
-import { getFixtures } from './redux/actions/fixtureActions';
 function App() {
 
-  const fixtureResults = useSelector((state) => state.allFixtureResults.fixtureResults)
+  const club = useSelector((state) => state.allClubs.selectedClub)
   const dispatch = useDispatch();
 
   useEffect(()=>{
 
-    dispatch(getFixtureResults());
+    dispatch(getClub(3006));
   },[dispatch]);
 
   
-  console.log("fixtures: ",fixtureResults)
+  console.log("Selected club: ",club)
   return (
     <div className="App">
       <header className="App-header">

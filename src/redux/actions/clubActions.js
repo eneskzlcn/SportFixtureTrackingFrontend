@@ -8,4 +8,11 @@ export const getClubs = () => async(dispatch) => {
             payload: clubs
         });
 };
+export const getClub = (id) => async(dispatch) => {
+    const club = await API.get('/Clubs/'+id).then(r => r.data);
+    dispatch({
+        type: ActionTypes.GET_CLUB,
+        payload: club
+    });
+};
     
