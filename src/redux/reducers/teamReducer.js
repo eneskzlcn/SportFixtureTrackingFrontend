@@ -1,13 +1,13 @@
 import { ActionTypes } from "../contants/actionTypes";
 
 const initialState = {
-    clubs : [],
+    teams : [],
 }
 // made a destructure for action = {type,payload}
-export const clubReducer = (state = initialState, {type, payload}) =>{
+export const teamReducer = (state = initialState, {type, payload}) =>{
     switch(type){
-        case ActionTypes.GET_CLUBS:
-            return {...state, clubs:payload };
+        case ActionTypes.GET_TEAMS:
+            return {...state, teams:payload };
         default:
             return state;
     }

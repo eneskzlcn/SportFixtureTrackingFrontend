@@ -1,9 +1,4 @@
-
-export const ClubActionTypes = {
+export const ActionTypes = {
     GET_CLUBS : "GET_CLUBS",
-    
-}
-
-export const TeamActionTypes = {
     GET_TEAMS : "GET_TEAMS",
 }
