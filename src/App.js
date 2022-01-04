@@ -2,20 +2,21 @@ import logo from './logo.svg';
 import './App.css';
 import { useSelector,useDispatch } from 'react-redux';
 import { useEffect } from 'react';
+import { getFixtureResults } from './redux/actions/fixtureResultActions';
 
 import { getFixtures } from './redux/actions/fixtureActions';
 function App() {
 
-  const fixtures = useSelector((state) => state.allFixtures.fixtures)
+  const fixtureResults = useSelector((state) => state.allFixtureResults.fixtureResults)
   const dispatch = useDispatch();
 
   useEffect(()=>{
 
-    dispatch(getFixtures());
+    dispatch(getFixtureResults());
   },[dispatch]);
 
   
-  console.log("fixtures: ",fixtures)
+  console.log("fixtures: ",fixtureResults)
   return (
     <div className="App">
       <header className="App-header">
