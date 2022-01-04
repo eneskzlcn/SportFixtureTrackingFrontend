@@ -1,22 +1,26 @@
 import logo from './logo.svg';
 import './App.css';
-import SportFixtureApiConsumer from './consumer/SportFixtureApiConsumer.js';
+import { useSelector,useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { getClubs } from './redux/actions/clubActions';
 
 function App() {
-    var s = new SportFixtureApiConsumer("https:/127.0.0.1:3000/")
-    return ( <
-        div className = "App" >
-        <
-        header className = "App-header" >
-        <
-        img src = { logo }
-        className = "App-logo"
-        alt = "logo" / >
+  const clubs = useSelector((state) => state.allClubs.clubs)
+  const dispatch = useDispatch();
 
-        <
-        /header> <
-        /div>
-    );
+  useEffect(()=>{
+    dispatch(getClubs());
+  },[]);
+
+  console.log("Clubs: ", clubs)
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+         
+      </header>
+    </div>
+  );
 }
 
 export default App;
