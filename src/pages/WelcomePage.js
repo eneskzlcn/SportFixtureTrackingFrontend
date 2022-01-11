@@ -1,10 +1,17 @@
+import PageHeader from "../components/PageHeader";
+import QueryForm from "../components/QueryForm";
+import WelcomeCarousel from "../components/WelcomeCarousel";
 
 function WelcomePage(props) {
-
+   
+    
     return ( 
-            <div>
-                Welcome To Main Page
-            </div>
+            <>
+                <PageHeader message="Welcome To Sport Fixture Tracking Site"></PageHeader> 
+                {/* <WelcomeCard></WelcomeCard> */}
+                <WelcomeCarousel></WelcomeCarousel>
+                <QueryForm></QueryForm>
+            </>
     
     );
   }

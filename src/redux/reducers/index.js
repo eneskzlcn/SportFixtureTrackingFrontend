@@ -4,6 +4,7 @@ import { fixtureReducer } from "./fixtureReducer";
 import { fixtureResultReducer } from "./fixtureResultReducer";
 import { sportReducer } from "./sportReducer";
 import { teamReducer } from "./teamReducer";
+import { alertReducer } from "./alertReducer";
 
 export const reducers = combineReducers({
     allClubs:clubReducer,
@@ -11,4 +12,5 @@ export const reducers = combineReducers({
     allSports:sportReducer,
     allFixtures:fixtureReducer,
     allFixtureResults:fixtureResultReducer,
+    alert:alertReducer,
 });
